@@ -11,9 +11,12 @@ artifacts:
   TENSORBOARD_ROOT_LOG_DIR: tensorboard_log_dir
   CALLBACKS_DIR: callbacks
 
-source_download_dirs:
-  - path_to_data_1
-  - path_to_data_1
+source_data_url: https://drive.google.com/file/d/1A59dnUwOgG3CXbq-ni2cykd7yZxaYTqH/view?usp=sharing
+
+source_download_dir:
+  data_dir: data
+  data_file: data.xml
+
 
 local_data_dirs:
   - path_to_local_data_1
