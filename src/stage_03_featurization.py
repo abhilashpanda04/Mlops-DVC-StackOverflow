@@ -1,8 +1,5 @@
 import argparse
-from multiprocessing.resource_sharer import stop
 import os
-import shutil
-from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directories,get_df
 from src.utils.featurize import save_matrix
@@ -30,8 +27,8 @@ def main(config_path, params_path):
     train_data_path=os.path.join(prepared_data_dir_path,artfacts["TRAIN_DATA"])
     test_data_path=os.path.join(prepared_data_dir_path,artfacts["TEST_DATA"])
 
-    featurized_data_dir_path=prepared_data_dir_path=os.path.join(artfacts["ARTIFACTS_DIR"],artfacts["FEATURIZED_DATA"])
-    create_directories([prepared_data_dir_path])
+    featurized_data_dir_path=os.path.join(artfacts["ARTIFACTS_DIR"],artfacts["FEATURIZED_DATA"])
+    create_directories([featurized_data_dir_path])
     featurized_train_data_path=os.path.join(featurized_data_dir_path,artfacts["FEATURIZED_TRAIN_DATA"])
     featurized_test_data_path=os.path.join(featurized_data_dir_path,artfacts["FEATURIZED_TEST_DATA"])
 
