@@ -49,8 +49,9 @@ jobs:
           pip install -r requirements.txt
 
           dvc repro -v
-          echo '#REPORTS' >> report.md
-          echo '## metrics' >> report.md
+          
+          echo "# REPORTS" >> report.md
+          echo "## metrics" >> report.md
           cat scores.json >> report.md
 
           cml-send-comment report.md
