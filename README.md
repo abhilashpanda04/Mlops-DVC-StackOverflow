@@ -1,5 +1,5 @@
 # dvc-project-template
-DVC project template
+DVC-NLP-USECASE
 
 ## STEPS -
 
@@ -32,3 +32,13 @@ dvc init
 ```
 
 ### STEP 06- commit and push the changes to the remote repository
+
+
+### reproduce the same with the help of dvc
+```bash
+dvc repro
+```
+
+```bash
+dvc studio: https://studio.iterative.ai/
+```
