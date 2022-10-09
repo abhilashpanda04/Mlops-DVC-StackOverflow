@@ -26,6 +26,7 @@ def main(config_path, params_path):
     featurized_data_dir_path=os.path.join(artfacts["ARTIFACTS_DIR"],artfacts["FEATURIZED_DATA"])
     featurized_train_data_path=os.path.join(featurized_data_dir_path,artfacts["FEATURIZED_TRAIN_DATA"])
 
+
     model_dir_path=os.path.join(artfacts["ARTIFACTS_DIR"],artfacts["MODEL_DIR"])
     create_directories([model_dir_path])
     model_path=os.path.join(model_dir_path,artfacts["MODEL_NAME"])
@@ -47,7 +48,7 @@ def main(config_path, params_path):
     model.fit(X,labels)
     joblib.dump(model,model_path)
 
-    logging.info(f'model is trained and saved at: {model_path}' )
+    logging.info(f'model is trained and saved at: {model_path}')
 
 
 if __name__ == '__main__':
