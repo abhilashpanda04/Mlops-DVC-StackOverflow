@@ -19,7 +19,7 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           
-          dvc repro -v
+          dvc repro --no-run-cache -v
 
           echo "# REPORTS" >> report.md
           echo "## metrics" >> report.md
