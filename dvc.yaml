@@ -7,7 +7,7 @@ stages:
       - src/utils/common.py
       - configs/config.yaml
     outs:
-      - data/data.xml
+      - data/data.xm
   
   prepare_data:
     cmd: python src/stage_02_prepare.py --config=configs/config.yaml --params=params.yaml
