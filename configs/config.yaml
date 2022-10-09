@@ -11,7 +11,7 @@ artifacts:
   MODEL_DIR: model
   MODEL_NAME: model.pkl
 
-source_data_url: https://drive.google.com/file/d/1A59dnUwOgG3CXbq-ni2cykd7yZxaYTqH/view?usp=sharing
+source_data_url: https://drive.google.com/uc?export=download&confirm=9_s_&id=1A59dnUwOgG3CXbq-ni2cykd7yZxaYTqH
 
 source_download_dir:
   data_dir: data
