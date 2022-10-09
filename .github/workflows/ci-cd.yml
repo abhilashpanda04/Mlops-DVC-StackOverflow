@@ -19,7 +19,7 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           
-          dvc repro -f -v
+          dvc repro -v
 
           echo "# REPORTS" >> report.md
           echo "## metrics" >> report.md
