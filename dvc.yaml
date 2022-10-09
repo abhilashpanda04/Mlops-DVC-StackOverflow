@@ -45,11 +45,32 @@ stages:
       - src/stage_04_train.py
       - src/utils/common.py
       - configs/config.yaml
-      - artifacts/prepared/test.pkl
-      - artifacts/prepared/train.pkl
+      - artifacts/features/train.pkl
     params:
       - train.seed
       - train.n_est
       - train.min_split
     outs:
       - artifacts/model/model.pkl
+  evaluate:
+    cmd: python src/stage_05_evaluate.py --config=configs/config.yaml 
+    deps:
+      - src/stage_05_evaluate.py
+      - src/utils/common.py
+      - artifacts/features/test.pkl
+      - configs/config.yaml
+      - artifacts/model/model.pkl
+
+    metrics:
+      - scores.json:
+          cache: false
+    plots:
+      - prc.json:
+          cache: false
+          x: recall
+          y: precession
+      - roc.json:
+          cache: false
+          x: fpr
+          y: tpr
+
