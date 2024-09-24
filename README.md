@@ -1,44 +1,49 @@
-# dvc-project-template
-DVC-NLP-USECASE
+# DVC-NLP-USECASE
 
-## STEPS -
+This project demonstrates the use of DVC (Data Version Control) for an NLP use case. DVC helps manage and track large datasets and machine learning models, making it easier to collaborate and reproduce experiments.
 
-### STEP 01- Create a repository by using template repository
+## Getting Started
 
-### STEP 02- Clone the new repository
+Follow these steps to set up and run the project on your local machine.
 
-### STEP 03- Create a conda environment after opening the repository in VSCODE
+### Prerequisites
 
+* Git
+* Conda (or Miniconda)
+
+### Steps
+
+1. **Clone the repository:
+   ```bash
+   git clone [https://github.com/](https://github.com/)<your-username>/dvc-project-template.git
+   cd dvc-project-template
+   ```
+2. **Create a conda environment:
 ```bash
 conda create --prefix ./env python=3.7 -y
-```
-
-```bash
 conda activate ./env
 ```
-OR
-```bash
-source activate ./env
-```
-
-### STEP 04- install the requirements
+3. Install project dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
-### STEP 05- initialize the dvc project
+4. **Initialize DVC:
 ```bash
 dvc init
 ```
-
-### STEP 06- commit and push the changes to the remote repository
-
-
-### reproduce the same with the help of dvc
+5. **Commit and push changes (if you've made any):
+```bash
+git add .
+git commit -m "Initialize DVC"
+git push origin main
+```
+6. **Reproducing the Results
 ```bash
 dvc repro
 ```
 
-```bash
-dvc studio: https://studio.iterative.ai/
-```
+DVC Studio
+
+You can also visualize and track your experiments using DVC Studio:
+
+[https://studio.iterative.ai/](https://studio.iterative.ai/)
