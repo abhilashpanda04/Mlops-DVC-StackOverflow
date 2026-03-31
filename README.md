@@ -1,49 +1,61 @@
-# DVC-NLP-USECASE
+# DVC NLP UseCase - Stack Overflow
 
-This project demonstrates the use of DVC (Data Version Control) for an NLP use case. DVC helps manage and track large datasets and machine learning models, making it easier to collaborate and reproduce experiments.
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![DVC](https://img.shields.io/badge/tool-DVC-blue)](https://dvc.org/)
+[![MLOps](https://img.shields.io/badge/approach-MLOps-green)](https://mlops.community/)
 
-## Getting Started
+NLP project demonstrating MLOps best practices using DVC for data versioning and experiment tracking with Stack Overflow data.
 
-Follow these steps to set up and run the project on your local machine.
+## Overview
 
-### Prerequisites
+This project showcases how to implement DVC for data versioning and experiment tracking in an NLP pipeline with reproducible ML workflows.
 
-* Git
-* Conda (or Miniconda)
+## Features
 
-### Steps
+- DVC Pipeline Orchestration
+- Data Versioning
+- Experiment Tracking
+- Metrics Management
+- Reproducible Workflows
+- Remote Storage Support
 
-1. **Clone the repository:
-   ```bash
-   git clone [https://github.com/](https://github.com/)<your-username>/dvc-project-template.git
-   cd dvc-project-template
-   ```
-2. **Create a conda environment:
+## Tech Stack
+
+- Framework: DVC, Python
+- Language: NLP with scikit-learn
+- Data: Stack Overflow dataset
+
+## Installation
+
 ```bash
+git clone https://github.com/abhilashpanda04/Mlops-DVC-StackOverflow.git
+cd Mlops-DVC-StackOverflow
+
 conda create --prefix ./env python=3.7 -y
 conda activate ./env
-```
-3. Install project dependencies:
-```bash
 pip install -r requirements.txt
-```
-4. **Initialize DVC:
-```bash
 dvc init
 ```
-5. **Commit and push changes (if you've made any):
+
+## Usage
+
 ```bash
-git add .
-git commit -m "Initialize DVC"
-git push origin main
-```
-6. **Reproducing the Results
-```bash
+# Run pipeline
 dvc repro
+
+# View pipeline
+dvc dag
+
+# Show metrics
+dvc metrics show
 ```
 
-DVC Studio
+## License
 
-You can also visualize and track your experiments using DVC Studio:
+MIT License
 
-[https://studio.iterative.ai/](https://studio.iterative.ai/)
+## Author
+
+Abhilash Kumar Panda
+- Email: abhilashk.isme1517@gmail.com
+- LinkedIn: https://www.linkedin.com/in/abhilash-kumar-panda/
