@@ -141,3 +141,5 @@ configs/secrets.yaml
 
 
 
+.DS_Store
+hello.py
