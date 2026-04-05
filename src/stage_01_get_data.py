@@ -1,9 +1,8 @@
 import argparse
 import os
 import logging
+import gdown
 from src.utils.common import read_yaml, create_directories
-import urllib.request as request
-
 
 STAGE = "stage_01_get_data" ## <<< change stage name 
 
@@ -14,7 +13,6 @@ logging.basicConfig(
     filemode="a"
     )
 
-
 def main(config_path):  
     ## read config files
     config = read_yaml(config_path)
@@ -23,15 +21,15 @@ def main(config_path):
 
     create_directories([local_data_dir])
     data_filename=config["source_download_dir"]["data_file"]
-    local_data_dir=os.path.join(local_data_dir,data_filename)
+    local_data_path=os.path.join(local_data_dir,data_filename)
 
-    logging.info("Download started")
-    filename,headers=request.urlretrieve(source_data_url,local_data_dir)
+    logging.info("Download started via gdown")
+    # Clean Google Drive URL to work with gdown
+    # URL is like: https://drive.google.com/uc?export=download&confirm=9_s_&id=1A59dnUwOgG3CXbq-ni2cykd7yZxaYTqH
+    file_id = source_data_url.split("id=")[-1]
+    gdown.download(id=file_id, output=local_data_path, quiet=False)
     logging.info("Download completed")
-    logging.info(f"Download file is present at {filename}")
-    logging.info(f"Download headers: {headers}")
-    # pass
-    print(config)
+    logging.info(f"Download file is present at {local_data_path}")
 
 
 if __name__ == '__main__':
